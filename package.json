@@ -1,0 +1,28 @@
+{
+  "name": "react-new-learning",
+  "version": "1.0.0",
+  "description": "Initial stage of React learning",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayush-ash/React_Learning.git"
+  },
+  "author": "Ashish Patil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mayush-ash/React_Learning/issues"
+  },
+  "homepage": "https://github.com/mayush-ash/React_Learning#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserlist":["last 2 Chrome versions"]
+}
