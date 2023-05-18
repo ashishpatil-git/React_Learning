@@ -7,6 +7,11 @@ Learning the foundations of React Library
 <!-- What is difference between async and defer -->
 <!-- What is difference between tilde and caret(^) -->
 <!-- Explore script types -->
+<!-- Explore babel -->
+<!-- how to write image tags in jsx -->
+<!-- What is Virtual DOM and why do we use it for reconciliation (diff algorith) --> //Akshay Saini Session 5
+<!-- why do we use keys in React elements -->
+<!-- What is React Fibre in React16-->
 
 1. We generally have only one root in our React App
 2. React.createRoot is used to create a root Element and whatever you pass inside createRoot( will be marked as root of Application).
@@ -21,9 +26,23 @@ Learning the foundations of React Library
                              Caching while Development(.parcel-cache folder used), File Compressions, 
                              Compatible with Older browser versions(Adds polyfills), Enable HTTPS on dev,
                              Consistent hashing algorithm,handles port number,Handles Transitive Dependencies.
+                             tree shaking(Removing unwanted code).
+9. BABEL - Babel is a free and open-source JavaScript transcompiler that is mainly used to convert ECMAScript 2015+ code into            backwards-compatible JavaScript code that can be run by older JavaScript engines. It allows web developers to take advantage of the    newest features of the language.
+
+10. In order to remove console.logs from our build before moving to production, we use babel tool.
+Steps1 :- Install babel-plugin-transform-remove-console as dev-dependencies
+Steps2 :- Create .babelrc file and configure.
+Steps3 : Add {"plugins": [["transform-remove-console", { "exclude": ["error", "warn"] }]]}
+
+11. class is className in JSX and JSX uses React.createElement internally.
+
+12. When UI is render as per the config returned by Backend API's,it is called Config Driven UI (Swiggy) -- Session5AkshaySaini 
+----System Design round question in Interviews
+13. If is considered a best practice to add keys and if key present, consider adding index keys as our last option to our React Elements.
+----nokeys is not acceptable
 
 <!-- In order to optimise our React app and make it development/production ready, we need some packages -->
-1. Bundlers :- vite,parcel,webpack(Here we'll use parcel)
+**1**. Bundlers :- vite,parcel,webpack(Here we'll use parcel)
 
 # Now we use a package manager like yarn or npm.
 Syntax :- npm init or yarn init

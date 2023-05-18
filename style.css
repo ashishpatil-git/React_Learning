@@ -1,6 +1,43 @@
-h2{
-    background-color: brown;
-    padding: 0 10;
-    color: azure;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    border: 1px solid red;
+}
+
+.nav-items > ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-items > ul > li {
+    padding: 10px;
+}
+
+.logo {
+    width: 80px;
+}
+.apptitle {
+    margin: 0;
+}
+
+a {
+    display: flex; /* use flexbox to place the image and text next to each other */
+    align-items: center; /* center align the items vertically */
+}
+
+.card {
+    width: 200px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.card > img{
+    width: 100%;
+    height: 120px;
+}
+
+.restaurantList {
+    display: flex;
 }

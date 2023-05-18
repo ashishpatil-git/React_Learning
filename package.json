@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Initial stage of React learning",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start:dev": "parcel index.html",
+    "build:prod": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/mayush-ash/React_Learning#readme",
   "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "parcel": "^2.8.3",
     "process": "^0.11.10"
   },
@@ -24,5 +26,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "browserlist":["last 2 Chrome versions"]
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
 }
