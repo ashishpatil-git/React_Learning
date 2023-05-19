@@ -40,6 +40,7 @@ Steps3 : Add {"plugins": [["transform-remove-console", { "exclude": ["error", "w
 ----System Design round question in Interviews
 13. If is considered a best practice to add keys and if key present, consider adding index keys as our last option to our React Elements.
 ----nokeys is not acceptable
+14. Shimmer Design User experience is used when our inital data is render and we place empty skeleton till they load.(eg. Youtube,swiggy)----Akshay saini Session 8 (2:16:00)
 
 <!-- In order to optimise our React app and make it development/production ready, we need some packages -->
 **1**. Bundlers :- vite,parcel,webpack(Here we'll use parcel)

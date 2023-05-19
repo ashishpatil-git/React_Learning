@@ -38,6 +38,9 @@ a {
     height: 120px;
 }
 
-.restaurantList {
-    display: flex;
+.restaurant-list {
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
 }
