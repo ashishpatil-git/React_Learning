@@ -2,6 +2,7 @@ import RestaurantCard from "../restaurantCard/RestaurantCard";
 // import sampleResponse from "../../constants/apiConstants";
 import React, { useEffect, useState } from "react";
 import ShimmerUI from "../shimmerUiComponent/shimmer";
+import { Link } from "react-router-dom";
 
 const filterData = (searchText, restaurantList) => {
     const filtered = restaurantList.filter((restaurant) => {
@@ -31,7 +32,7 @@ const Body = () => {
     if(!allRestaurants) return null;
 
     // Condition Rendering
-    return (allRestaurants.length == 0) ? <ShimmerUI /> : (
+    return (allRestaurants.length == 0) ? <ShimmerUI units={10} /> : (
         <>
             <div className="search-container">
                 <input
@@ -48,7 +49,7 @@ const Body = () => {
             </div>
             <div className="restaurant-list">
                 {(filteredRestaurants?.length==0) ? <h1>No restaurant matches your Search</h1> : filteredRestaurants.map((response) => (
-                    <RestaurantCard {...response.data} key={response.data.id} />
+                    <Link to={"/restaurant/"+response.data.id}><RestaurantCard {...response.data} key={response.data.id} /></Link>
                 ))}
             </div>
         </>

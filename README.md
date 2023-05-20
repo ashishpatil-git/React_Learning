@@ -12,6 +12,9 @@ Learning the foundations of React Library
 <!-- What is Virtual DOM and why do we use it for reconciliation (diff algorith) --> //Akshay Saini Session 5
 <!-- why do we use keys in React elements -->
 <!-- What is React Fibre in React16-->
+<!-- Why is CDN/Cloudinary considered a best place to host images -->
+<!-- SPA --Single page Application -->
+<!-- Types of Routing 1)Clientside and 2)ServerSide routing -->
 
 1. We generally have only one root in our React App
 2. React.createRoot is used to create a root Element and whatever you pass inside createRoot( will be marked as root of Application).

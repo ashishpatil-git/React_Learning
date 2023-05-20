@@ -1,10 +1,12 @@
 import { useState } from "react";
+import sfLogo from "../../assets/images/sfLogo.jpg";
+import { Link } from "react-router-dom";
 
 const Title = () => (
-    <a href="/">
-    <img className="logo" alt="logo" src="https://cdn.octopix.in/uploads/company-logo/2020/11/19/food-villa-pSJVhwoN8KxgwV9jtuB1MlosJ0ejoKfiBiVO1jJPLM61shyarbxVvjIFy3DVpbUML8eBxcUo7BOWXQcd-350x350.jpg"/>
+    <Link to="/">
+    <img className="logo" alt="logo" src={sfLogo}/>
     <h1 className="apptitle">Food Villa</h1>
-    </a>
+    </Link>
 )
 
 const HeadingComponent = () => {
@@ -13,11 +15,10 @@ const HeadingComponent = () => {
         <div className="heading">
             <Title />
             <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact</li>
-                    <li>Cart</li>
+                <ul className="nav-items-list">
+                    <li><Link to="/">Home</Link></li>
+                    <Link to="/about"><li>About</li></Link>
+                    <Link to="/contact"><li>Contact</li></Link>
                 </ul>
             </div>
             {

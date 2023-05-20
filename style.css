@@ -1,41 +1,46 @@
 .heading {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-    border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  border: 1px solid red;
 }
 
 .nav-items > ul {
-    display: flex;
-    list-style-type: none;
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-items-list {
+  justify-content: space-around;
 }
 
 .nav-items > ul > li {
-    padding: 10px;
+  padding: 10px;
+  justify-content: space-around;
 }
 
 .logo {
-    width: 80px;
+  width: 80px;
 }
 .apptitle {
-    margin: 0;
+  margin: 0;
 }
 
 a {
-    display: flex; /* use flexbox to place the image and text next to each other */
-    align-items: center; /* center align the items vertically */
+  display: flex; /* use flexbox to place the image and text next to each other */
+  align-items: center; /* center align the items vertically */
 }
 
 .card {
-    width: 200px;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
+  width: 200px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
 }
 
-.card > img{
-    width: 100%;
-    height: 120px;
+.card > img {
+  width: 100%;
+  height: 120px;
 }
 
 .restaurant-list {
@@ -43,4 +48,30 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
+}
+
+.shimmer-card {
+  width: 200px;
+  height: 200px;
+  background: lightgrey;
+  margin: 20px;
+}
+
+.menu-item-list {
+    display: flex;
+    flex-direction:inherit;
+    /* justify-content:; */
+    max-height: 250px;
+    padding: 20px;
+}
+
+.restaurant-img {
+    width: 500px;
+    height: 270px;
+    border-radius: 5px;
+  }
+
+.welcome-msg{
+    position: fixed;
+    bottom: 100;
 }

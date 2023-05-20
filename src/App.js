@@ -20,15 +20,49 @@ import ReactDOM from "react-dom/client";
 import HeaderComponent from "../src/components/headerComponent/Header"
 import Body from "../src/components/bodyComponent/Body";
 import Footer from "../src/components/footerComponent/Footer";
+import About from "../src/components/aboutComponent/About";
+import Contact from "../src/components/contactComponent/Contact";
+import PageNotFound from "../src/components/errorPageComponent/PageNotFound";
+import RestaurantDetails from "./components/restaurantDetailsComponent/restaurant.details.Component";
+import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
 
 const AppLayout =() =>{
     return(
         <React.Fragment>
             <HeaderComponent />
-            <Body />
+            <Outlet />  {/*Children mention in parents path will be replaced with this Outlet Component*/}
+            {/* <Body /> -----------> this will be rendered using Outlet */}
             <Footer />        
         </React.Fragment>
     );
 }
+
+const appRouter = createBrowserRouter([
+    {
+        path : "/",
+        element : <AppLayout/>,
+        errorElement : <PageNotFound />,
+        children : [
+            {
+                path : "/",
+                element : <Body />
+            },
+            {
+                path : "/about",
+                element : <About />
+            },
+            {
+                path : "/contact",
+                element : <Contact />
+            },
+            {
+                path : "/restaurant/:id",
+                element : <RestaurantDetails/>,
+                errorElement : <PageNotFound />,
+            }
+        ]
+    },
+])
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout/>);
+root.render(<RouterProvider router={appRouter}/>);
