@@ -3,30 +3,33 @@ import { useParams } from "react-router-dom";
 import { baseURL,SAMPLE_MENU } from "../../constants/apiConstants";
 import { useEffect, useState } from "react";
 import ShimmerUI from "../shimmerUiComponent/shimmer";
+import useRestaurant from "../../utils/customHooks/useRestaurant";
 
 const RestaurantDetails = () =>{
-    // const reqParams = useParams();
+//   *****************Custom hook used instead***************************
+    // const [restautant,setRestaurant] = useState([]);
     const {id} = useParams();
-    const [restautant,setRestaurant] = useState([]);
     const [restoImg,setrestoImg] = useState("");
-    
-    useEffect(()=>{
-        getRestoDetals();
-    },[]);
+    const restautant = useRestaurant(id);
+
+//   *****************Custom hook used instead***************************
+    // useEffect(()=>{
+    //     getRestoDetals();
+    // },[]);
     useEffect(()=>{
         getRestoImg(id);
     },[restautant])
-    // console.log(restautant[0].data.id);
-    
-    const getRestoDetals = async() =>{
-        const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.029844139999999&lng=77.99313599999999&page_type=DESKTOP_WEB_LISTING");
-        // const response = await fetch("https://www.swiggy.com/dapi/menu/v4/full?lat=12.9351929&lng=77.62448069999999&menuId");
-        const jsonData =  await response.json();
-        setRestaurant(jsonData?.data?.cards[0]?.data?.data?.cards);
-    }
+
+
+//   *****************Custom hook used instead***************************
+    // const getRestoDetals = async() =>{
+    //     const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.029844139999999&lng=77.99313599999999&page_type=DESKTOP_WEB_LISTING");
+    //     // const response = await fetch("https://www.swiggy.com/dapi/menu/v4/full?lat=12.9351929&lng=77.62448069999999&menuId");
+    //     const jsonData =  await response.json();
+    //     setRestaurant(jsonData?.data?.cards[0]?.data?.data?.cards);
+    // }
     async function getRestoImg(resID){
         const filtered = restautant?.filter((item)=>item.data.id==resID);
-        // console.log("filtered",resID,filtered[0]?.data);
         setrestoImg(filtered[0]?.data);
     }
 

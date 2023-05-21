@@ -15,6 +15,7 @@ Learning the foundations of React Library
 <!-- Why is CDN/Cloudinary considered a best place to host images -->
 <!-- SPA --Single page Application -->
 <!-- Types of Routing 1)Clientside and 2)ServerSide routing -->
+<!-- Why cant we use used async in useEffect but we can use async with componentDidMount() method -->
 
 1. We generally have only one root in our React App
 2. React.createRoot is used to create a root Element and whatever you pass inside createRoot( will be marked as root of Application).

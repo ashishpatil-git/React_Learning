@@ -25,13 +25,13 @@ import Contact from "../src/components/contactComponent/Contact";
 import PageNotFound from "../src/components/errorPageComponent/PageNotFound";
 import RestaurantDetails from "./components/restaurantDetailsComponent/restaurant.details.Component";
 import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
+import Profile from "./components/profileComponent/Profile.Class.Component";
 
 const AppLayout =() =>{
     return(
         <React.Fragment>
             <HeaderComponent />
             <Outlet />  {/*Children mention in parents path will be replaced with this Outlet Component*/}
-            {/* <Body /> -----------> this will be rendered using Outlet */}
             <Footer />        
         </React.Fragment>
     );
@@ -45,11 +45,17 @@ const appRouter = createBrowserRouter([
         children : [
             {
                 path : "/",
-                element : <Body />
+                element : <Body />,
             },
             {
                 path : "/about",
-                element : <About />
+                element : <About />,
+                children : [                //Creating nested child components. Outlet for this has to be given in parent component.
+                    {                        //Since <About /> is parent here, you need to add <Outlet /> in <About />.
+                        path:"profile",      //if you write "/profile"==> it will take as "localhost/profile", so use only "profile"
+                        element:<Profile name={"Sanjay"}/>      //Sending props to class component.
+                    }
+                ]
             },
             {
                 path : "/contact",
