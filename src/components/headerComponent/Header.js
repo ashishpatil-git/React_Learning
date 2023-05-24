@@ -19,6 +19,7 @@ const HeadingComponent = () => {
                     <li><Link to="/">Home</Link></li>
                     <Link to="/about"><li>About</li></Link>
                     <Link to="/contact"><li>Contact</li></Link>
+                    <Link to="/instamart"><li>Instamart</li></Link>
                 </ul>
             </div>
             {
